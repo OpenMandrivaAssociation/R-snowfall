@@ -2,16 +2,16 @@
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          1.83
+Version:          1.84
 Release:          1
 Summary:          Easier cluster computing (based on snow)
 Group:            Sciences/Mathematics
 License:          GPL
-URL:              None
-Source0:          http://cran.r-project.org/src/contrib/Archive/snowfall/snowfall_1.83.tar.gz
+URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
+Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
 Requires:         R-snow 
 Requires:         R-Rmpi 
-BuildRequires:    R-devel texlive-collection-latex R-snow
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-snow
 BuildRequires:    R-Rmpi 
 
 %description
@@ -27,7 +27,6 @@ management tool sfCluster, but can also used without it.
 %build
 
 %install
-rm -rf %{buildroot}
 mkdir -p %{buildroot}%{rlibdir}
 %{_bindir}/R CMD INSTALL -l %{buildroot}%{rlibdir} %{packname}
 test -d %{packname}/src && (cd %{packname}/src; rm -f *.o *.so)
