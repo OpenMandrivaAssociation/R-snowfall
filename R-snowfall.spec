@@ -4,7 +4,7 @@
 Name:             R-%{packname}
 Version:          1.83
 Release:          1
-Summary:          Easier cluster computing (based on snow).
+Summary:          Easier cluster computing (based on snow)
 Group:            Sciences/Mathematics
 License:          GPL
 URL:              None
