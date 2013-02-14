@@ -1,14 +1,16 @@
 %global packname  snowfall
 %global rlibdir  %{_libdir}/R/library
 
+%define debug_package %{nil}
+
 Name:             R-%{packname}
-Version:          1.84
+Version:          1.84.4
 Release:          1
 Summary:          Easier cluster computing (based on snow)
 Group:            Sciences/Mathematics
 License:          GPL
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/snowfall_1.84-4.tar.gz
 Requires:         R-snow R-Rmpi
 BuildRequires:    R-devel Rmath-devel texlive-collection-latex
 BuildRequires:    R-snow R-Rmpi
